@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,19 +8,73 @@ html {
   scroll-behavior: smooth;
   transition: 0.5s;
 }
+
 .set-margin {
   margin: 20px;
 }
-p{
+
+p {
   opacity: 0.8;
+  font-family: Montserrat, 'sans-serif';
 }
-header{
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.377);
-background-image: url('https://images.pexels.com/photos/12470916/pexels-photo-12470916.jpeg');
+.pricing-sec p{
+  @apply px-6 mt-1 mb-3 leading-[1.4] font-medium
+}
+.pricing-sec h2{
+  @apply px-6 mt-3 font-medium
+}
+
+
+@media screen and (max-width: 810px){
+
+.menu-open{
+  height: 100vh;
+  background-color: rgba(27, 27, 27, 1);
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+.menu-open ul{
+  transition: all .6s;
+}
+.menu-open ul li:not(:last-child){
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(75, 75, 75, 0.726);
+}
+.menu-open ul li:hover{
+  background-color: rgba(105, 105, 105, 0.212);
+}
+.menu-open ul li a{
+  width:100%;
+  height: 100%;
+  padding-inline: 2rem;
+  /* background-color: red; */
+  font-size: 1.4rem;
+}
+}
+
+.menu-open ul li{
+  border-bottom: 2px solid transparent;
+  transition: .6s;
+}
+.menu-open ul li:hover{
+  border-bottom: 2px solid #fba61b;
+}
+
+header, footer{
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: darken;
+}
+header{
+  background-color: rgba(0, 0, 0, 0.377);
+  background-image: url('https://images.pexels.com/photos/12470916/pexels-photo-12470916.jpeg');
+}
+footer{
+  background-color: rgba(23, 49, 40, 0.637);
+  background-image: url('https://images.unsplash.com/photo-1547093349-65cdba98369a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fG1vdW50YWlufGVufDB8fDB8fHww');
+  background-attachment: unset;
+
 }

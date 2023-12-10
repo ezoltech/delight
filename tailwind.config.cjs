@@ -6,6 +6,10 @@ module.exports = {
     "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
+    fontFamily: {
+      curley: ['Lobster'],
+      mont: ['Montserrat'],
+    },
     extend: {},
   },
   plugins: [require("flowbite/plugin")],
