@@ -1,8 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import { Nav } from "./components/Nav";
+
 import { Under } from "./components/Under";
 import Loader from "./components/Loader";
+import YourComponent from "./components/Nav";
 function App() {
   return (
     <div className="App">
@@ -13,7 +14,7 @@ function App() {
           </div>
         }
       />
-      <Nav />
+      <YourComponent />
       <Outlet className="set-margin" />
       <Under />
     </div>

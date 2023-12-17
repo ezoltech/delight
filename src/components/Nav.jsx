@@ -1,77 +1,123 @@
 import React, { useState, useEffect } from "react";
 import { Navbar } from "flowbite-react";
-export const Nav = () => {
-  // const [isMenuOpen, setIsMenuOpen] = useState(true);
-  // const [topArea, setTopArea] = useState(0);
+import { FaWhatsapp } from "react-icons/fa";
+function YourComponent() {
+  const [topArea, setTopArea] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // const toggleMenu = () => {
-  //   setIsMenuOpen(!isMenuOpen);
-  // };
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setTopArea(window.scrollY);
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      setTopArea(window.scrollY);
+    };
 
-  //   window.addEventListener("scroll", handleScroll);
-  // }, []);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
-    // <nav
-    //   className={`${isMenuOpen ? 'menu-open ' : ""} nav md:h-[8vh] text-white md:bg-transparent py-3 md:py-0 fixed top-0 left-0 w-full flex md:justify-between justify-start flex-col md:flex-row items-center text-center px-[3rem] z-20`}
-    //   style={{
-    //     backgroundImage: topArea >= 450 ? 'linear-gradient(#f7f7f7, #f7f7f7)' : 'linear-gradient(#01010199, transparent)',
-    //     color: topArea >= 450 ? '#111' : '#f7f7f7',
-    //     transition: 'color .6s'
-    // }}
-    // >
-    //   <div className="log">
-    //     <img src="" alt="" />
-    //     <h2>Lorem, ipsum.{topArea}</h2>
-    //   </div>
-    //   <ul className="w-[40%] flex justify-evenly">
-    //     <li><a href="">Home</a> </li>
-    //     <li><a href="">Tours</a> </li>
-    //     <li><a href="">services</a> </li>
-    //     <li><a href="">Contact</a> </li>
-    //   </ul>
-    //   <div className="phonenum  md:visible invisible">+25198278387</div>
-    //   <div onClick={toggleMenu} className=" select-none cursor-pointer md:hidden text-2xl absolute px-2 py-1 right-4 top-5">
-    //     {isMenuOpen ? "X" : '☰'}
-    //   </div>
-    // </nav>
     <>
       <div className="top-0 sticky bg-transparent z-30">
         <Navbar
           fluid
           rounded
-          className="absolute w-full"
-          style={{ backgroundColor: "rgba(255, 255, 255, 0)", zIndex: "10" }}
+          className={`absolute w-full ${isMenuOpen ? "menu-open" : ""}`}
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0)",
+            zIndex: "10",
+            color: topArea >= 450 ? "#111" : "#f7f7f7",
+            backgroundImage:
+              topArea >= 450
+                ? "linear-gradient(#f7f7f7, #f7f7f7)"
+                : "linear-gradient(#01010199, transparent)",
+            transition: "color .6s",
+          }}
         >
-          <Navbar.Brand href="https://flowbite-react.com">
-            <img
-              src="/favicon.svg"
-              className="mr-3 h-6 sm:h-9"
-              alt="Flowbite React Logo"
-            />
+          <Navbar.Brand href="https://delighttour.netlify.app">
+            <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="logo" />
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-              Flowbite React
+              Delight Tour and Accommodation
             </span>
           </Navbar.Brand>
-          <div className="flex md:order-2">
-            +2512345678
+          <div className="flex md:order-2 flex-row gap-4">
+            <FaWhatsapp height="10px" width="10px" />
+            <a href="https://wa.me/qr/XATL45V764QNK1">+251978650636</a>
             <Navbar.Toggle />
           </div>
           <Navbar.Collapse>
-            <Navbar.Link href="#" active>
+            <style>
+              {`
+                .nav-link:hover {
+                  text-decoration: underline;
+                  text-decoration-color: orange;
+                }
+                .nav-link:nth-child(1):hover {
+                  color: orange;
+                }
+                .nav-link:nth-child(2):hover {
+                  color: green;
+                }
+                .nav-link:nth-child(3):hover {
+                  color: orange;
+                }
+                .nav-link:nth-child(4):hover {
+                  color: orange;
+                }
+                .nav-link:nth-child(5):hover {
+                  color: orange;
+                }
+              `}
+            </style>
+            <Navbar.Link
+              href="/"
+              active
+              className="nav-link"
+              style={{ color: topArea >= 450 ? "#111" : "#f7f7f7" }}
+            >
               Home
             </Navbar.Link>
-            <Navbar.Link href="#">About</Navbar.Link>
-            <Navbar.Link href="#">Services</Navbar.Link>
-            <Navbar.Link href="#">Pricing</Navbar.Link>
-            <Navbar.Link href="#">Contact</Navbar.Link>
+            <Navbar.Link
+              href="/about"
+              className="nav-link"
+              style={{ color: topArea >= 450 ? "#111" : "#f7f7f7" }}
+            >
+              About
+            </Navbar.Link>
+            <Navbar.Link
+              href="/#services"
+              className="nav-link"
+              style={{ color: topArea >= 450 ? "#111" : "#f7f7f7" }}
+              onClick={() => scrollToSection("services")}
+            >
+              Services and pricings
+            </Navbar.Link>
+
+            <Navbar.Link
+              href="#contact"
+              className="nav-link"
+              style={{ color: topArea >= 450 ? "#111" : "#f7f7f7" }}
+              onClick={() => scrollToSection("contact")}
+            >
+              Contact
+            </Navbar.Link>
           </Navbar.Collapse>
         </Navbar>
       </div>
+      {/* Your existing commented-out Nav component */}
     </>
   );
-};
+}
+
+export default YourComponent;

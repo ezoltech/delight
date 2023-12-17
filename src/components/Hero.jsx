@@ -20,9 +20,19 @@ export const Hero = () => {
   return (
     <div>
       <header className="flex justify-center px-[10px] items-center text-white min-h-[100vh]">
-        <div className="top-[30vw] z-10" style={{ position: 'absolute', top: `${factorBackground * 0.06 + 35}vh` }}>
-          <h1 className=" md:text-[3rem] text-[2rem] font-[100] font-curley">Glamping In Medellin</h1>
-          <h3 className="w-full text-right md:text-xl text-lg font-mont">Accommodation</h3>
+        <div
+          className="top-[30vw] z-10"
+          style={{
+            position: "absolute",
+            top: `${factorBackground * 0.06 + 35}vh`,
+          }}
+        >
+          <h1 className=" md:text-[3rem] text-[2rem] font-[100] font-curley">
+            City Tour In Addis Ababa
+          </h1>
+          <h3 className="w-full text-right md:text-xl text-lg font-mont">
+            Delightful
+          </h3>
         </div>
       </header>
     </div>
