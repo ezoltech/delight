@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { AiFillMedicineBox } from "react-icons/ai";
@@ -6,6 +6,11 @@ import { FaGears } from "react-icons/fa6";
 import { SiAddthis } from "react-icons/si";
 
 function Features() {
+  const [showFood, setShowFood] = useState(false);
+  const [showEssentials, setShowEssentials] = useState(false);
+  const [showOutdoorGear, setShowOutdoorGear] = useState(false);
+  const [showMedicine, setShowMedicine] = useState(false);
+
   return (
     <Fade delay={400}>
       <div className="md:px-[10rem] px-[7px] py-10">
@@ -38,29 +43,78 @@ function Features() {
           </div>
 
           <div className="md:w-[50%] grid grid-cols-2 justify-center content-center">
-            <div className="flex flex-col items-center mt-10 ml-8">
+            <div className="flex flex-col items-center mt-10 ml-8 cursor-pointer">
               <IoFastFoodSharp className="text-[#fba61b] md:text-[3.6rem] text-[3rem]" />
               <h3 className="font-medium font-mont mt-2 text-gray-600 md:text-lg text-md">
                 Food / Snacks
               </h3>
+              <button
+                onClick={() => setShowFood(!showFood)}
+                className="text-blue-500 mt-2"
+              >
+                {showFood ? "Hide Details" : "Read More"}
+              </button>
+              {showFood && (
+                <p className="mt-2">
+                  Bottled water, protein bars, local cultural meal and cultural
+                  drinks, snack packs, small muffins.
+                </p>
+              )}
             </div>
-            <div className="flex flex-col items-center mt-10 -ml-8">
+            <div className="flex flex-col items-center mt-10 -ml-8 cursor-pointer">
               <AiFillMedicineBox className="text-[#fba61b] md:text-[3.6rem] text-[3rem]" />
               <h3 className="font-medium font-mont mt-2 text-gray-600 md:text-lg text-md">
                 Other Essentials
               </h3>
+              <button
+                onClick={() => setShowEssentials(!showEssentials)}
+                className="text-blue-500 mt-2"
+              >
+                {showEssentials ? "Hide Details" : "Read More"}
+              </button>
+              {showEssentials && (
+                <p className="mt-2">
+                  Safety Briefing, City map with Full Guides, Tissues and wet
+                  wipes, Local currency, clear itinerary and schedule (Depends
+                  on the customer preference).
+                </p>
+              )}
             </div>
-            <div className="flex flex-col items-center mt-10 ml-8">
+            <div className="flex flex-col items-center mt-10 ml-8 cursor-pointer">
               <FaGears className="text-[#fba61b] md:text-[3.6rem] text-[3rem]" />
               <h3 className="font-medium font-mont mt-2 text-gray-600 md:text-lg text-md">
                 Outdoor Gear
               </h3>
+              <button
+                onClick={() => setShowOutdoorGear(!showOutdoorGear)}
+                className="text-blue-500 mt-2"
+              >
+                {showOutdoorGear ? "Hide Details" : "Read More"}
+              </button>
+              {showOutdoorGear && (
+                <p className="mt-2">
+                  Portable chargers, Camera, Sun protection, Vehicle.
+                </p>
+              )}
             </div>
-            <div className="flex flex-col items-center mt-10 -ml-8">
+            <div className="flex flex-col items-center mt-10 -ml-8 cursor-pointer">
               <SiAddthis className="text-[#fba61b] md:text-[3.6rem] text-[3rem]" />
               <h3 className="font-medium font-mont mt-2 text-gray-600 md:text-lg text-md">
                 Medicine
               </h3>
+              <button
+                onClick={() => setShowMedicine(!showMedicine)}
+                className="text-blue-500 mt-2"
+              >
+                {showMedicine ? "Hide Details" : "Read More"}
+              </button>
+              {showMedicine && (
+                <p className="mt-2">
+                  Antacids, Pain Reliever, First Aid manual. In an emergency
+                  case, take our customers to the hospital. "Apply to all our
+                  customers".
+                </p>
+              )}
             </div>
           </div>
         </div>

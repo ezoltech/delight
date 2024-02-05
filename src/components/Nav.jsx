@@ -46,14 +46,14 @@ function YourComponent() {
           }}
         >
           <Navbar.Brand href="https://delighttour.netlify.app">
-            <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="logo" />
+            <img src="/logo.svg" className="mr-3 h-6 sm:h-9" alt="logo" />
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-              Delight Tour and Accommodation
+              Delight Tour
             </span>
           </Navbar.Brand>
           <div className="flex md:order-2 flex-row gap-4">
             <FaWhatsapp height="10px" width="10px" />
-            <a href="https://wa.me/qr/XATL45V764QNK1">+251978650636</a>
+            <a href="https://wa.me/qr/XATL45V764QNK1">+251984529929</a>
             <Navbar.Toggle />
           </div>
           <Navbar.Collapse>

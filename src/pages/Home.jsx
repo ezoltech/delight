@@ -3,6 +3,7 @@ import { Hero } from "../components/Hero";
 import { Overview } from "../components/Overview";
 import Loader from "../components/Loader";
 import { Contact } from "../components/Contact";
+import { Fade } from "react-awesome-reveal";
 
 const Price = lazy(() => import("../components/Price"));
 const Features = lazy(() => import("../components/Features"));
