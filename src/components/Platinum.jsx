@@ -1,6 +1,7 @@
 import React from "react";
 import { Timeline } from "flowbite-react";
 import { TiPointOfInterestOutline } from "react-icons/ti";
+import { PurchaseButton } from "./PurchaseButton";
 export const Platinum = () => {
   return (
     <div>
@@ -37,12 +38,7 @@ export const Platinum = () => {
                       <p className="text-sm">Choosen Places In Addis Ababa</p>
 
                       <div className="w-full text-center">
-                        <button
-                          className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit"
-                          href="#"
-                        >
-                          <a href="delight.tour.acc@gmail.com">Book Now</a>
-                        </button>
+                        <PurchaseButton />
                       </div>
                     </div>
                   </div>
@@ -75,14 +71,7 @@ export const Platinum = () => {
                       <h2>Places :</h2>
                       <p className="text-sm"> Choosen Places in Addis Ababa</p>
                       <div className="w-full text-center">
-                        <button
-                          className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit"
-                          href="#"
-                        >
-                          <a href="mailto:delight.tour.acc@gmail.com">
-                            Book Now
-                          </a>
-                        </button>
+                        <PurchaseButton />
                       </div>
                     </div>
                   </div>
@@ -117,14 +106,7 @@ export const Platinum = () => {
                       <p className="text-sm">Choosen Places in Addis</p>
 
                       <div className="w-full text-center">
-                        <button
-                          className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit"
-                          href="#"
-                        >
-                          <a href="mailto:delight.tour.acc@gmail.com">
-                            Book Now
-                          </a>
-                        </button>
+                        <PurchaseButton />
                       </div>
                     </div>
                   </div>

@@ -56,12 +56,7 @@ function Price() {
               <h2>Duration :</h2>
               <p className="text-sm">{service.duration || "sample duration"}</p>
               <div className="w-full text-center">
-                <button
-                  className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit"
-                  href="#"
-                >
-                  <a href="delight.tour.acc@gmail.com">Book Now</a>
-                </button>
+                <PurchaseButton />
               </div>
             </div>
           </div>

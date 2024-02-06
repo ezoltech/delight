@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TiPointOfInterestOutline } from "react-icons/ti";
 import { Timeline } from "flowbite-react";
 import { BASE_URL } from "../../utils/utils";
+import { PurchaseButton } from "./PurchaseButton";
 import axios from "axios";
 export const Gold = () => {
   const [goldData, setGoldData] = useState([]);
@@ -93,12 +94,7 @@ export const Gold = () => {
                       <p className="text-sm">Choosen Places In Addis Ababa</p>
 
                       <div className="w-full text-center">
-                        <button
-                          className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit"
-                          href="#"
-                        >
-                          Book Now
-                        </button>
+                        <PurchaseButton />
                       </div>
                     </div>
                   </div>
@@ -130,12 +126,7 @@ export const Gold = () => {
                       <h2>Places :</h2>
                       <p className="text-sm"> Choosen Places in Addis Ababa</p>
                       <div className="w-full text-center">
-                        <button
-                          className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit"
-                          href="#"
-                        >
-                          Book Now
-                        </button>
+                        <PurchaseButton />
                       </div>
                     </div>
                   </div>
@@ -169,12 +160,7 @@ export const Gold = () => {
                       <p className="text-sm">Choosen Places in Addis</p>
 
                       <div className="w-full text-center">
-                        <button
-                          className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit"
-                          href="#"
-                        >
-                          Book Now
-                        </button>
+                        <PurchaseButton />
                       </div>
                     </div>
                   </div>
