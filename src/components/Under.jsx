@@ -50,7 +50,8 @@ export const Under = () => {
             <div className="flex flex-col gap-3 relative items-center">
               <Footer.Copyright href="#" by="Delight™" year={2023} />
               <h2>
-                made by the <a href="#">elites</a>{" "}
+                made by <a href="https://ezoltech.netlify.app">ezoltech</a> and{" "}
+                <a href="https://contact-henok.netlify.app/">henaorth</a>{" "}
               </h2>
             </div>
 
