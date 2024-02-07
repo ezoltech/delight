@@ -57,7 +57,7 @@ export const Under = () => {
 
             <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
               <Footer.Icon
-                href="https://www.instagram.com/delight_tours_accomodation?igshid=ODA1NTc5OTg5Nw=="
+                href="https://www.facebook.com/profile.php?id=61554133757479&mibextid=ZbWKwL"
                 icon={BsFacebook}
               />
               <Footer.Icon href="#" icon={BsInstagram} />
