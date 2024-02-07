@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Fade } from "react-awesome-reveal";
+import { Splide } from "@splidejs/react-splide";
 export const DummyOverviewContent = () => {
   return (
     <div>
@@ -45,13 +46,10 @@ export const DummyOverviewContent = () => {
                   offering a glimpse into the city's storied history.
                   {/* {contentSetOne[id].description} */}
                 </p>
-                <button className="md:mx-0 mx-auto mb-10 bg-[#02b1b4] text-xl text-gray-200 rounded-xl hover:bg-[#02989b] py-2 px-4 w-fit">
-                  Book Now
-                </button>
               </div>
               <div className="flex justify-center items-center px-8">
                 <img
-                  // src={contentSetOne[id].photo} // Your image URL
+                  src="/lucy_2.jpg" // Your image URL
                   alt="overview"
                   className="h-[75vh] object-cover md:max-w-[27rem] w-full rounded-[50px]"
                 />
@@ -85,19 +83,13 @@ export const DummyOverviewContent = () => {
               </div>
               <div className="flex justify-center items-center">
                 <img
-                  src="https://images.unsplash.com/photo-1624314138470-5a2f24623f10?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Your image URL
+                  src="/lucy.jpg"
                   alt="overview"
                   className="h-[75vh] object-cover md:max-w-[27rem] w-full rounded-[50px]"
                 />
               </div>
             </div>
           </Fade>
-          <p className="mt-5 leading-[1.4] font-medium text-[#555] text-lg">
-            Lorem ipsum dolor sit, suscipit totam repudiandae vero dolorum
-            magni, reiciendis voluptas sint recusandae hic ratione dolorem
-            fugiat repellendus consectetur? Vero facere, tempora illo vitae
-            autem optio dolores!
-          </p>
         </div>
 
         <Fade>

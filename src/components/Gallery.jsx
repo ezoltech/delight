@@ -41,11 +41,7 @@ function Gallery() {
           <span className="text-[#fba61b]"> When You Visit </span> The Capital
           City Of Ethiopia
         </h1>
-        {/* <p className="relative px-6 my-6 mb-12 leading-[1.2] font-medium text-[#555] text-md">
-          Lorem ipsum, dolor sit amet consectetur adipisicing Repellat tenetur,
-          itaque placeat aut necessitatibus dolorum non accusamus doloribus
-          aliquam, sed dignissimos expedita! Error nostrum alias itaque!
-        </p> */}
+       
       </div>
       <div className="mt-8 w-full grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] content-center gap-3">
         {photos.map((photo, index) => {
