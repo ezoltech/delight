@@ -29,4 +29,4 @@ export const clearLocalStorage = () => {
 };
 
 export const BASE_URL = "https://delightcity.onrender.com/api/v1";
-export const BASE_IMAGE_URL = "https://delightcity.onrender.com";
+export const BASE_IMAGE_URL = "https://delightcity.onrender.com/";
