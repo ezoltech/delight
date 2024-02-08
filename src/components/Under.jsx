@@ -60,9 +60,12 @@ export const Under = () => {
                 href="https://www.facebook.com/profile.php?id=61554133757479&mibextid=ZbWKwL"
                 icon={BsFacebook}
               />
-              <Footer.Icon href="#" icon={BsInstagram} />
               <Footer.Icon
-                href="https://api.whatsapp.com/qr/XATL45V764QNK1?autoload=1&app_absent=0"
+                href="https://www.instagram.com/delight_tours_accomodation?igsh=MTVuYjAwbGpweXZhMw=="
+                icon={BsInstagram}
+              />
+              <Footer.Icon
+                href="https://wa.me/qr/A7SKJLRIQAJZF1"
                 icon={BsWhatsapp}
               />
               <Footer.Icon href="#" icon={BsWechat} />
